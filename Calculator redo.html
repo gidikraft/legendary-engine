@@ -1,0 +1,101 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <head>
+        <title>
+            Calculator Redo
+        </title>
+        <script type="text/javascript">
+            function numDisplay(n){
+                calcform.txtview.value = calcform.txtview.value + n;
+            }
+            function equal(){
+            let exp = calcform.txtview.value;
+                if (exp) {
+                    calcform.txtview.value = eval(exp);
+                }
+            }
+            function clean(){
+                calcform.txtview.value = "";
+            }
+            function backspace(){
+                let prevValue = calcform.txtview.value;
+                calcform.txtview.value = prevValue.substr(0, prevValue.length-1)
+            }
+            function square(){
+            let exp = calcform.txtview.value;
+                if (exp) {
+                    calcform.txtview.value = Math.pow(exp, 2);
+                }
+            }
+        </script>
+        <style>
+            .table {
+                margin : 0;
+                padding : 0;
+            }
+            #textview {
+                width: 225;
+                margin: 5;
+                font-size: 25;
+                padding: 5;
+            }
+            .button {
+                width: 50;
+                height: 50;
+                font-size: 25;
+                margin: 2;
+                cursor: pointer;
+            }
+            #main{
+                position: absolute;
+                top: 50;
+                left: 50;
+                background: rgb(47, 248, 255);
+                
+            }            
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <form name=calcform>
+            <input id="textview" type="text" name="txtview"><br>
+            <table id="table">
+                <tr>
+                    <td><input class="button" type="button" name="btn9" value=9 onclick="numDisplay(btn9.value)"></td>
+                    <td><input class="button" type="button" name="btn8" value=8 onclick="numDisplay(btn8.value)"></td>
+                    <td><input class="button" type="button" name="btn7" value=7 onclick="numDisplay(btn7.value)"></td>
+                    <td><input class="button" type="button" name="addbtn" value=+ onclick="numDisplay(addbtn.value)"></td>
+                </tr>
+                <tr>
+                    <td><input class="button" type="button" name="btn6" value=6 onclick="numDisplay(btn6.value)"></td>
+                    <td><input class="button" type="button" name="btn5" value=5 onclick="numDisplay(btn5.value)"></td>
+                    <td><input class="button" type="button" name="btn4" value=4 onclick="numDisplay(btn4.value)"></td>
+                    <td><input class="button" type="button" name="subbtn" value=- onclick="numDisplay(subbtn.value)"></td>
+                </tr>
+                <tr>
+                    <td><input class="button" type="button" name="btn3" value=3 onclick="numDisplay(btn3.value)"></td>
+                    <td><input class="button" type="button" name="btn2" value=2 onclick="numDisplay(btn2.value)"></td>
+                    <td><input class="button" type="button" name="btn1" value=1 onclick="numDisplay(btn1.value)"></td>
+                    <td><input class="button" type="button" name="mulbtn" value=* onclick="numDisplay(mulbtn.value)"></td>
+                </tr>
+                <tr>
+                    <td><input class="button" type="button" name="dotbtn" value=. onclick="numDisplay(dotbtn.value)"></td>
+                    <td><input class="button" type="button" name="btn0" value=0 onclick="numDisplay(btn0.value)"></td>
+                    <td><input class="button" type="button" name="sqrbtn" value=^2 onclick="square()"></td>
+                    
+                    <td><input class="button" type="button" name="divbtn" value=/ onclick="numDisplay(divbtn.value)"></td>
+                </tr>
+                <tr>
+                    <td><input class="button" type="button" name="clrbtn" value=Clr onclick="clean()"></td> 
+                    <td><input class="button" type="button" name="delbtn" value=Del onclick="backspace()"></td>
+                    <td colspan=2><input class="button" style="width:106" type="button" name="eqlbtn" value="=" onclick=equal(numDisplay)></td>
+                </tr>
+               
+            </table>
+            
+            
+            </form>
+        </div>
+        
+    </body>
+</html>
