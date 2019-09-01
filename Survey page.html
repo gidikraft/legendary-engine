@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title id="title">Survey Page</title>
+</head>
+<body>
+  <style>
+    html{
+    background-color: rgb(188, 238, 245) ;
+    }
+    #description{
+      text-align: center;
+    }
+    #survey-form{
+      background-color: rgb(230, 230, 230);
+      line-height: 30px;
+    }
+    .field{
+      width: 1000px;
+      margin-left: 200px;
+      padding: 30px;
+      border: 0px solid rgb(73, 146, 73);
+    }
+    #submit-button{
+      margin-left: 200px;
+    }
+    #comments{
+      
+      
+      width: 300px;
+      border: 1px solid #73AD21;
+      padding: 10px;
+    }
+
+  </style>
+    <h1 id="description">Survey Page</h1>
+    <div class="div-body">
+      <form id="survey-form">
+        <fieldset class="field">
+          
+          <p>Let us know how we can improve freeCodeCamp</p>
+          <label for="name" id="name-label">Name:</label>
+          <input id="name" type="text" placeholder="Enter your name here" name="name" required><br>
+          <label for="email" id="email-label">Email:</label>
+          <input id="email" type="email" placeholder="Enter email address" name="email" required><br>
+          <label for="age" id="number-label">Age:</label>
+          <input id="number" type="number" placeholder="What is your age" min="18" max="60" name="age" required><br>
+        </fieldset>
+        <fieldset class="field">
+          <label>Which option best describes your current role?</label>
+          <select id="dropdown">
+            <option disabled selected value>--select an option--</option>
+            <option value="Student">Student</option>
+            <option value="Fulltime-Job">Fulltime Job</option>
+            <option value="Fulltime-Learner">Fulltime Learner</option>
+            <option value="Prefer-Not-To-Say">Prefer not to say</option>
+            <option value="Others">Others</option>
+        </select>
+        </fieldset>
+        <fieldset class="field">
+          <p>How likely are you to recommend freeCodeCamp to a friend?</p>
+          <label for="definitely">
+            <input id="definitely" type="radio" value="definitely" name="likelihood">Definitely</label><br>
+          <label for="maybe">
+            <input id="maybe" type="radio" value="maybe" name="likelihood">Maybe</label><br>
+          <label for="not-sure">
+            <input id="not-sure" type="radio" value="not-sure" name="likelihood">Not sure</label><br>
+        </fieldset>
+        <fieldset class="field">
+          <label>What do you like most about FCC?</label>
+           <select id="FCClikes">
+            <option disabled selected value>--select an option--</option>
+            <option value="challenges">challenges</option>
+            <option value="projects">projects</options>
+            <option value="community">community</options>
+            <option value="open-source">open source</option>
+            </select>
+        </fieldset>          
+        <fieldset class="field">
+          <p>Things you want improved</p>
+          <label for="front-end-projects">
+            <input id="front-end-projects" type="checkbox" name="suggestions" value="front-end-projects">Front end projects</label><br>
+            <label for="back-end-projects">
+              <input id="back-end-projects" type="checkbox" name="suggestions" value="back-end-projects">Back end projects</label><br>
+            <label for="data-visualization">
+              <input id="data-visualization" type="checkbox" name="suggestions" value="data-visualization">Data visualization</label><br>
+            <label for="challenges">
+              <input id="challenges" type="checkbox" name="suggestions" value="challenges">Challenges</label><br>
+            <label for="open-source-community">
+              <input id="open-source-community" type="checkbox" name="suggestions" value="open-source-community">Open source community</label><br>
+            <label for="gitter-help-rooms">
+              <input id="gitter-help-rooms" type="checkbox" name="suggestions" value="gitter-help-rooms">Gitter help rooms</label><br>
+            <label for="videos">
+              <input id="videos" type="checkbox" name="suggestions" value="videos">Videos</label><br>
+            <label for="city-meetups">
+              <input id="city-meetups" type="checkbox" name="suggestions" value="city-meetups">City Meetups</label><br>
+            <label for="wiki">
+              <input id="wiki" type="checkbox" name="suggestions" value="wiki">Wiki</label><br>
+            <label for="forum">
+              <input id="forum" type="checkbox" name="suggestions" value="forum">Forums</label><br>
+            <label for="additional-courses">
+              <input id="additional-courses" type="checkbox" name="suggestions" value="additional-courses">Additional Courses</label></p>
+        </fieldset>
+        <fieldset class="field">
+          <form method="post" action="ridewithmii@hotmail.com">
+          <label>Any Comments or suggestions?</label>
+            <textarea id="comments" type="text" rows="3" columns="4" placeholder="Enter additional comments here"></textarea><br>
+          <input id="submit-button" type="submit" value="Submit form"> 
+          </form>
+        </fieldset>
+        
+  
+        
+        <!--<button type="submit" id="submit">submit</button>-->
+      </form>
+    </div>
+</body>
+</html>
+
+
