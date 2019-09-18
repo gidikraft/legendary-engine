@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Casaflo - Add New Hotels</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <!-- //Header -->
+    <div class="container-fluid" >
+        <div class="bg-info">
+          <h1><a class="home-click text-dark " href="index.html">Casaflo Bookings</a></h1>
+        </div>
+    </div>
+    <!-- //Header -->
+    
+    <!-- //Breadcrumbs -->
+    <div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="Add new hotels.html">Add new hotel</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="">Check avaliable rooms</a></li>
+        </ol>
+    </nav>
+    </div>
+    <!-- //Breadcrumbs -->
+    <!-- title -->
+    <h1 class="header-w3ls text-dark">Add New Hotels</h1>
+    <!-- //title -->
+    <!-- content -->
+    <div class="porduct-order-agile" style="background-color: rgba(104, 9, 9, 0.74)">
+        <form action="#" method="POST">            
+            <div class="form-group">
+                <p>Hotel Name</p>
+                <input type="text" name="name" placeholder="" required="">
+            </div>
+            <div class="form-group">
+                <p>Email </p>
+                <input type="email" placeholder="example@mail.com" required="">
+            </div>
+            <div class="form-group">
+                <p>Phone</p>
+                <input type="text" name="Phone" placeholder="08012345678" required="">
+            </div>
+            <div class="form-group">
+                <p>Description</p>
+                <input type="text" name="Description" placeholder="" required="">
+            </div>
+            <div class="main">
+                <div class="form-left-to-w3l">
+                    <p>Address</p>
+                    <input type="text" name="address" placeholder="" required="">
+                </div>
+                <div class="form-left-to-w3l">
+                    <p>Street Address</p>
+                    <input type="text" name="address" placeholder="" required="">
+                </div>
+            </div>
+            <div class="main">
+                <div class="form-left-to-w3l">
+                    <p>City</p>
+                    <input type="text" name="city" placeholder="" required="">
+                    <div class="clear"></div>
+                </div>
+                <div class="form-left-to-w3l">
+                    <p>State</p>
+                    <input type="text" name="state" placeholder="" required="">
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="form-left-to-w3l">
+                    <p>Number of Rooms</p>
+                    <input type="text" name="Pin code" placeholder="Pin Code" required="">
+                    <div class="clear"></div>
+                </div>
+                <div class="form-left-to-w3l">
+                    <p>Select Country</p>
+                    <select class="form-control buttom">
+                        <option disabled selected value>Select Country Here</option>
+                        <option value="category2">Nigeria</option>
+                        <option value="category1">Ghana</option>
+                        <option value="category3">Kenya</option>
+                    </select>
+                </div>
+            </div>
+            <div class="order-list">
+                <p>Order 1</p>
+                <div class="main">
+                    <div class="form-order">
+                        <select class="form-control buttom">
+                        <option value="">Types of Rooms
+                        </option>
+                        <option value="category2">Luxury</option>
+                        <option value="category1">Suite</option>
+                        <option value="category3">Regular</option>
+                        </select>
+                    </div>
+                    <div class="form-order">
+                        <select class="form-control buttom">
+                        <option value="">Item Name
+                        </option>
+                        <option value="category2">Item A</option>
+                        <option value="category1">Item B</option>
+                        <option value="category3">Item C</option>
+                        <option value="category3">Item D</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>
+            <div>
+                <p>Description</p>
+                <textarea class="form-control" id="comments" type="text" rows="3" columns="4" placeholder="Enter additional description here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
