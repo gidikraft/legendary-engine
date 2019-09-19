@@ -1,0 +1,28 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "username": "trevor",
+      "email": "trevor@homer.com",
+      "password": "12345678"
+    }
+  ],
+  "hotel": [
+    {
+      "id": 1,
+      "hotel name": "some comment",
+      "email": 1,
+      "phone": "08012345678",
+      "location": "lekki epe expressway",
+      "street address": "oniru",
+      "number of rooms": "50",
+      "country": "nigeria",
+      "types of rooms": "luxury",
+      "price": "N20,000 - N30,000",
+      "description": "a luxury hotel worth every penny spent"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
