@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Casaflo - Add New Hotels</title>
+    <script 
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <!-- //Header -->
+    <div class="container-fluid" >
+        <div class="bg-dark">
+          <h1><a class="home-click text-primary " href="index.html">Casaflo Bookings</a></h1>
+        </div>
+    </div>
+    <!-- //Header -->
+    
+    <!-- //Breadcrumbs -->
+    <div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="add-new-hotels.html">Add new hotel</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="">Check avaliable rooms</a></li>
+        </ol>
+    </nav>
+    </div>
+    <!-- //Breadcrumbs -->
+    <!-- title -->
+    <h1 class="header-w3ls text-dark">Add New Hotels</h1>
+    <!-- //title -->
+    <!-- content -->
+    <div class="porduct-order-agile modal-body my-5 pt-4" style="background-color: rgba(104, 9, 9, 0.74)">
+        <form action="#" method="POST">            
+            <div class="form-group">
+                <p>Hotel Name</p>
+                <input type="text" id="hotel" name="name" placeholder="">
+            </div>
+            <div class="form-group">
+                <p>Email </p>
+                <input type="email" id="email" placeholder="example@mail.com">
+            </div>
+            <div class="form-group">
+                <p>Phone</p>
+                <input type="text" id="phone" name="Phone" placeholder="08012345678">
+            </div>
+            <div class="main">
+                <div class="form-left-to-w3l">
+                    <p>Address 1</p>
+                    <input type="text" id="address1" name="address" placeholder="">
+                </div>
+                <div class="form-left-to-w3l">
+                    <p>Address 2</p>
+                    <input type="text" id="address2" name="address" placeholder="">
+                </div>
+            </div>
+            <div class="main">
+                <div class="form-left-to-w3l">
+                    <p>City</p>
+                    <input type="text" id="city" name="city" placeholder="">
+                    <div class="clear"></div>
+                </div>
+                <div class="form-left-to-w3l">
+                    <p>State</p>
+                    <input type="text" id="state" name="state" placeholder="">
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="form-left-to-w3l">
+                    <p>Number of Rooms</p>
+                    <input type="text" id="room-number" name="Pin code" placeholder="Number of rooms">
+                    <div class="clear"></div>
+                </div>
+                <div class="form-left-to-w3l">
+                    <p >Select Types of Rooms</p>
+                    <select class="form-control buttom">
+                        <option value="">Types of Rooms
+                        </option>
+                        <option id="luxury" value="luxury">Luxury</option>
+                        <option id="suite" value="suite">Suite</option>
+                        <option id="regular" value="regular">Regular</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <p>Description</p>
+                <textarea class="form-control" id="description" type="text" rows="3" columns="4" placeholder="Enter additional description here"></textarea>
+            </div>
+            <button class="btn btn-primary" id="registerbtn">Submit</button>
+        </form>
+    </div>
+    <!-- footer -->
+    <footer class="py-5 bg-dark" id="footer">
+        <div class="container py-xl-4 py-lg-3">
+            <div class="row footer-grids">
+                <div class="col-lg-2 col-6 footer-grid">
+                    <h3 class="mb-sm-4 mb-3 pb-lg-3">Home</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.html">Index</a>
+                        </li>
+                        <li>
+                            <a href="#about">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#services">Today's Deals</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-grid">
+                    <h3 class="mb-sm-4 mb-3 pb-lg-3"> Company</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="hotel-listings.html">Find a hotel</a>
+                        </li>
+                        <li>
+                            <a href="#blog">Our Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-grid footer-contact mt-lg-0 mt-4">
+                    <h3 class="mb-sm-4 mb-3 pb-lg-3"> Contact Us</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            +01(24) 8543 8088
+                        </li>
+                        <li>
+                            <a href="mailto:info@casaflo.com">info@ecasaflo.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-grid mt-lg-0 mt-4">
+                    <div class="footer-logo">
+                        <h2 class="text-lg-center text-center">
+                            <a class="logo text-wh font-weight-bold" href="index.html"><span
+                                    class="text-bl">C</span>asaflo</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <script>
+        $(document).ready(function(event){
+            $("#registerbtn").click(function(event){ 
+                event.preventDefault();        
+                var preload= {
+                    "hotel": [
+                        {
+                        "id": 1,
+                        "hotel name": $("#hotel").val(),
+                        "email": $("#email").val(),
+                        "phone": $("phone").val(),
+                        "address1": $("#address1").val(),
+                        "address2": $("#address2").val(),
+                        "location": $("#city").val(),
+                        "types-of-rooms": "luxury",
+                        "number-of-rooms": $("#room-number").val(),
+                        "description": $("#description").val()
+                        }
+                    ]
+                }
+                console.log(preload)
+                localStorage.setItem('hotelRecords', JSON.stringify(preload));
+            })
+        })
+                
+    </script>
+</body>
+</html>
