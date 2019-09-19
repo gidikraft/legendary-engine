@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign up for Casaflo</title>
+  <script 
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <script type="text/javascript">
+    const validate = () => {
+      // let contactName = document.getElementById("name-match");
+      // let password = document.getElementById("password");
+      
+      // if (contactName.value.length < 4){
+      //   alert("Name must be at least 4 letters");                    
+      // }      
+      // if (password.value.length < 8) {
+      //   document.getElementById("errors").innerHTML="Your password must be at least 8 characters";
+      //   document.getElementById("errors").style.color="Red";
+      //   alert ("too_short");
+      // }
+      // if (password.value.search(/[a-z]/) === -1) {
+      //   document.getElementById("errors").innerHTML="Your password must contain at least one lowercase letter.";
+      //   document.getElementById("errors").style.color="Red";
+      //   alert ("no_lowercase_letters");
+      // }
+      // if (password.value.search(/[A-Z]/) === -1) {
+      //   document.getElementById("errors").innerHTML="Your password must contain at least one uppercase letter.";
+      //   document.getElementById("errors").style.color="Red";
+      //   alert ("no_uppercase_letters");
+      // }
+      // if (password.value.search(/[0-9]/) === -1) {
+      //   document.getElementById("errors").innerHTML="Your password must contain at least one digit.";
+      //   document.getElementById("errors").style.color="Red";
+      //   alert ("no_numbers");
+      // }
+      // if (password.value !== document.getElementById("password-match").value) {
+      //   document.getElementById("errors").innerHTML="Passwords do not match.";
+      //   document.getElementById("errors").style.color="Red";
+      //   alert ("password_not_matching");
+      // }        
+      // document.getElementById("errors").innerHTML=`Thank you for registering.`;
+      // document.getElementById("errors").style.color="Green";
+      return ("ok"); 
+    }
+
+
+    $('.registerbtn').on("click", function(event) {
+    event.preventDefault();
+    const username = $('#name-match').val();
+    const password = $('#password').val();
+    const email = $('#email').val();
+    //Make get request to check if the user already exist
+    $.ajax({
+      method: 'GET',
+      url: `http://localhost:3000/users?email=${email}`,
+      data: {
+        email,
+      },
+      success: function(response) {
+        if (response.length) {
+          $('#errors').html('User already exist');
+        } else {
+          //Submit the user data if the user does not exist
+          $.ajax({
+            method: 'POST',
+            url: 'http://localhost:3000/users',
+            data: {
+              fullname,
+              username,
+              email,
+              password,
+            },
+            success: function() {
+              $('#errors').html('Registration Successfull');
+            },
+          });
+        }
+      },
+    });
+  });
+        
+        
+
+      
+  </script>
+  <div>
+    <!-- //Header -->
+    <div class="container-fluid" >
+      <div class="bg-dark">
+        <h1><a class="home-click text-primary" href="index.html">Casaflo Bookings</a></h1>
+      </div>
+    </div>
+    <!-- //Header -->
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand" href="index.html">Casaflo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="hotel-listings.html">Hotels Listings<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login-page.html">Login/Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer" tabindex="-1" aria-disabled="false">Contact Us</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <!--navbar-->
+  <!--breadcrumbs-->
+  <div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="add-new-hotels.html">Add new hotels</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="#">Check available rooms</a></li>
+      </ol>
+    </nav>
+  </div>
+  <!--breadcrumbs-->
+  <div class="inner-banner-w3ls py-5" id="home">
+    <div class="container py-xl-5 py-lg-3">
+      <!-- register  -->
+      <div class="modal-body mt-md-2 mt-5" style="background-color: rgba(104, 9, 9, 0.74)">
+        <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">Register Now</h3>
+      <form action="http://localhost:3000" method="GET" onsubmit="validate()">
+          <div class="form-group">
+            <p id="errors"></p>
+            <label class="col-form-label">Username</label>
+            <input type="text" class="form-control" id="name-match" placeholder="Username" name="username">
+            <span>Please enter a unique username at least 4 characters long</span>           
+          </div>
+          <div class="form-group">
+            <label class="col-form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="loremipsum@email.com" name="Email" required="">                
+          </div>
+          <div class="form-group">
+              <label class="col-form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="*****" name="Password" required="">
+              <span>Password must be at least 8 characters long and must include one numeric character "0-9" and one Uppercase character"A-Z"</span>
+          </div>
+          <div class="form-group">
+              <label class="col-form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="password-match" placeholder="*****" name="Password" required="">
+          </div>
+          <div class="sub-w3l my-3">
+            <div class="sub-w3layouts_hub">
+                <input type="checkbox" id="brand1" value="">
+                <label for="brand1" class="text-li text-style-w3ls">
+                    <span></span>I Accept to the Terms & Conditions</label>
+            </div>
+          </div>
+          <button class="btn button-default btn-info" id="registerbtn">Register</button>
+          <h5 class="text-center">Already have an account? Click <a class="text-info" href="login-page.html">here</a> to sign in.</h5>
+        </form>
+      </div>
+      <!-- //register -->
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="py-5 bg-dark" id="footer">
+    <div class="container py-xl-4 py-lg-3">
+        <div class="row footer-grids">
+            <div class="col-lg-2 col-6 footer-grid">
+                <h3 class="mb-sm-4 mb-3 pb-lg-3">Home</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="index.html">Index</a>
+                    </li>
+                    <li>
+                        <a href="#about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#services">Today's Deals</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-6 footer-grid">
+                <h3 class="mb-sm-4 mb-3 pb-lg-3"> Company</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="hotel-listings.html">Find a hotel</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Our Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-6 footer-grid footer-contact mt-lg-0 mt-4">
+                <h3 class="mb-sm-4 mb-3 pb-lg-3"> Contact Us</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        +01(24) 8543 8088
+                    </li>
+                    <li>
+                        <a href="mailto:info@casaflo.com">info@ecasaflo.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 footer-grid mt-lg-0 mt-4">
+                <div class="footer-logo">
+                    <h2 class="text-lg-center text-center">
+                        <a class="logo text-wh font-weight-bold" href="index.html"><span
+                                class="text-bl">C</span>asaflo</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+</body>
+</html>
