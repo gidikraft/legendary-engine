@@ -65,66 +65,58 @@
         <img class="img-responsive img-fluid max-width: 100% height: auto;" src="../images/banner-3.jpg" alt="A terrace view"> 
     </div>
     <!--Hotel table-->
-            <!-- title -->
-            <h1 class="header-w3ls text-center text-dark">Registered Hotels List</h1>
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-            <!-- DataTales Example -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-center text-primary">DataTables Example</h6>
-                </div>
-                <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                        <th>Hotel Name</th>
-                        <th>Location</th>
-                        <th>Types of Rooms</th>
-                        <th>Rooms</th>
-                        <th>Date Added</th>
-                        <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td><a href="/Ibis Hotel Lagos Airport.html">Ibis Hotel, Lagos Airport</a></td>
-                        <td>Airport Road</td>
-                        <td>Suites</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>N60,000</td>
-                        </tr>
-                        <tr>
-                        <td><a href="/newcastle.html">Newcastle Hotel</a></td>
-                        <td>Anthony, Lagos</td>
-                        <td>Regular</td>
-                        <td>30</td>
-                        <td>2011/07/25</td>
-                        <td>N20,000</td>
-                        </tr>
-                        <tr>
-                        <td><a href="/four-points.html">Four Points By Sheraton</a></td>
-                        <td>Victoria Island</td>
-                        <td>Luxury</td>
-                        <td>120</td>
-                        <td>2009/01/12</td>
-                        <td>N80,000</td>
-                        </tr>
-                        <tr>
-                        <td><a href="#">Golden Tulip</a> </td>
-                        <td>Festac Town, Lagos</td>
-                        <td>Suites</td>
-                        <td>80</td>
-                        <td>2012/03/29</td>
-                        <td>N50,000</td>
-                        </tr>             
-                    </tbody>
-                    </table>
-                </div>
-                </div>
-            </div>
+    <div>
+        <table class="table table-light table-responsive table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">Pricing</th>
+                    <th scope="col">Class</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">*</th>
+                    <td table-responsive-sm-7><span><a class="text-dark" href="#">Newcastle Hotel</a></span><br><br>
+                        <span>Anthony Village, Lagos</span></td>
+                    <td table-responsive-sm-2><span>₦20,000/Night</span><br><br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Book Now
+                        </button>                                
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td table-responsive-sm-7><span><a class="text-dark" href="#">Luxury</a></span><br><br>
+                        <!--<a href="#" class="btn btn-danger btn-circle">
+                                <i class="fa fa-trash"></i>--></td>
+                </tr>
+            </tbody>
+        </table>  
+    </div>
+    <!--add new hotel form-->
+    <div>
+        <h4 class="text-center text-primary"><a href="#">Add new Hotels</a></h4>
+    </div>
     <!-- footer -->
     <footer class="py-5 bg-dark" id="footer">
     <div class="container py-xl-4 py-lg-3">
